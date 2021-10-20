@@ -33,6 +33,10 @@ body {
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
 }
 
+.tx-white {
+  color:#FBF5F3
+}
+
 .cover-container {
   max-width: 42em;
 }
@@ -64,3 +68,27 @@ body {
   border-bottom-color: #fff;
 }
 
+.red {
+  color: #EF5D60;
+}
+
+a {
+  color: #4EA5D9;
+  text-decoration: none;
+}
+a:hover {
+  color: #5998C5;
+}
+
+ul {
+  list-style: none; /* Remove default bullets */
+}
+
+ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #EF5D60; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */ 
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
