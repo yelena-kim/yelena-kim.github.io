@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="h-100">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -68,28 +68,30 @@
   </script>
 </head>
 
-<body class="d-flex tx-white bg-dark">
+<body class="tx-white">
 
-  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    <header class="mb-auto">
-      <div class="clearfix">
-        <a class="float-md-start" href="https://yelena.kim" aria-label="Yelena Kim — Home">
-          <img src="static/img/logo.svg" alt="YK" width="44" height="44">
-        </a>
-        <nav class="nav nav-masthead justify-content-center float-md-end" aria-label="Main navigation">
-          <a class="nav-link" href="#skills">Skills</a>
-          <a class="nav-link" href="#exp">Experience</a>
-          <a class="nav-link" href="#edu">Education</a>
-          <a class="nav-link" href="#lic">Certifications</a>
-          <a class="nav-link" href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
+  <header>
+    <div class="header-inner">
+      <a class="header-logo" href="https://yelena.kim" aria-label="Yelena Kim — Home">
+        <img src="static/img/logo.svg" alt="YK" width="40" height="40">
+        <span class="header-name">Yelena Kim</span>
+      </a>
+      <nav class="nav-masthead" aria-label="Main navigation">
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#exp">Experience</a>
+        <a class="nav-link" href="#edu">Education</a>
+        <a class="nav-link" href="#lic">Certifications</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <main class="px-3">
+  <div class="cover-container mx-auto px-3">
+
+    <main>
       <div id="intro" class="py-5 my-4">
         <h1 class="display-4">Yelena Kim</h1>
-        <p class="lead text-white-50 mb-1">SAP Project Manager, PMP &nbsp;·&nbsp; Head of SAP Center of Expertise</p>
+        <p class="lead mb-1" style="color: rgba(228,224,218,.5)">SAP Project Manager, PMP &nbsp;·&nbsp; Head of SAP Center of Expertise</p>
         <hr class="red">
         <p class="lead">SAP Project Manager and PMP with 20+ years of expertise delivering SAP/ERP implementations and managing support operations across international teams. I bring structure, clarity, and follow-through to complex projects by:</p>
         <ul>
@@ -235,9 +237,21 @@
       </div>
     </main>
 
-    <footer class="mt-auto text-white-50 d-flex justify-content-between align-items-center">
-      <a href="https://yelena.kim">Yelena Kim © 2026</a>
-      <a href="#intro" aria-label="Back to top">↑ Top</a>
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="footer-name">Yelena Kim</span>
+          <span class="footer-tagline">SAP Project Manager, PMP</span>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:hello@yelena.kim">hello@yelena.kim</a>
+          <a href="https://www.linkedin.com/in/yelena-kim/" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        <div class="footer-meta">
+          <a href="#intro" aria-label="Back to top">↑ Top</a>
+          <span class="footer-copy">© 2026</span>
+        </div>
+      </div>
     </footer>
   </div>
 
