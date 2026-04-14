@@ -5,10 +5,11 @@ html {
   scroll-behavior: smooth;
 }
 
+
 /*
  * Globals
  */
- .bd-placeholder-img {
+.bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
   -webkit-user-select: none;
@@ -27,7 +28,7 @@ html {
 .btn-secondary:hover,
 .btn-secondary:focus {
   color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
+  text-shadow: none;
 }
 
 
@@ -36,16 +37,18 @@ html {
  */
 
 body {
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(160deg, #1e2028 0%, #16181d 100%);
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .4);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .4);
 }
 
 .tx-white {
-  color:#FBF5F3
+  color: #FBF5F3;
 }
 
 .cover-container {
-  max-width: 42em;
+  max-width: 52em;
 }
 
 
@@ -53,73 +56,260 @@ body {
  * Header
  */
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(22, 24, 29, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: .6rem 0;
+  border-bottom: 1px solid rgba(239, 93, 96, 0.15);
+}
+
 .nav-masthead .nav-link {
   padding: .25rem 0;
+  font-size: .875rem;
   font-weight: 700;
-  color: rgba(255, 255, 255, .5);
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .45);
   background-color: transparent;
-  border-bottom: .25rem solid transparent;
+  border-bottom: 2px solid transparent;
+  transition: color .2s, border-bottom-color .2s;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
+  color: rgba(255, 255, 255, .85);
+  border-bottom-color: rgba(239, 93, 96, .5);
 }
 
 .nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
+  margin-left: 1.25rem;
 }
 
 .nav-masthead .active {
   color: #fff;
-  border-bottom-color: #fff;
+  border-bottom-color: #EF5D60;
 }
 
-.red {
-  color: #EF5D60;
-  border-color: #EF5D60;
-  opacity: 1;
+
+/*
+ * Typography
+ */
+
+h1 {
+  font-weight: 800;
+  letter-spacing: -.03em;
 }
+
+h2 {
+  font-weight: 800;
+  letter-spacing: -.02em;
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.lead {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+
+/*
+ * Section divider
+ */
+
+hr.red {
+  border: none;
+  border-top: 1.5px solid #EF5D60;
+  opacity: 1;
+  margin: .6rem 0 1.4rem;
+}
+
+
+/*
+ * Links
+ */
 
 a {
   color: #4EA5D9;
   text-decoration: none;
-}
-a:hover {
-  color: #5998C5;
+  transition: color .15s;
 }
 
+a:hover {
+  color: #7ec0e8;
+}
+
+
+/*
+ * Lists
+ */
+
 ul {
-  list-style: none; /* Remove default bullets */
+  list-style: none;
 }
 
 ul li::before {
-  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #EF5D60; /* Change the color */
-  font-weight: bold; /* If you want it to be bold */
-  display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 1em; /* Also needed for space (tweak if needed) */
-  margin-left: -1em; /* Also needed for space (tweak if needed) */
+  content: "\2022";
+  color: #EF5D60;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
 
+
 /*
- * Skills table
+ * Experience entries
  */
-.skills-grid {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: .35rem 1rem;
+
+#exp .pb-4 {
+  border-left: 2px solid rgba(239, 93, 96, .25);
+  padding-left: 1.25rem;
+  transition: border-color .25s;
 }
+
+#exp .pb-4:hover {
+  border-left-color: #EF5D60;
+}
+
+#exp .pb-4 p.lead {
+  color: rgba(251, 245, 243, .7);
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+
+#exp .pb-4 > p:not(.lead) {
+  font-size: .85rem;
+  color: rgba(251, 245, 243, .4);
+  margin-bottom: .5rem;
+}
+
+
+/*
+ * Skills
+ */
 
 .skills-label {
   color: #EF5D60;
   font-weight: 700;
-  white-space: nowrap;
+  font-size: .8rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: .4rem;
 }
+
+.skill-tag {
+  display: inline-block;
+  padding: .25rem .7rem;
+  margin: .2rem .15rem;
+  border: 1px solid rgba(239, 93, 96, .3);
+  border-radius: 4px;
+  font-size: .82rem;
+  font-weight: 600;
+  color: #FBF5F3;
+  background: rgba(239, 93, 96, .07);
+  transition: background .2s, border-color .2s;
+}
+
+.skill-tag:hover {
+  background: rgba(239, 93, 96, .18);
+  border-color: #EF5D60;
+}
+
+
+/*
+ * Mobile
+ */
+@media (max-width: 767.98px) {
+
+  /* Header: stack logo above nav */
+  header > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .35rem;
+  }
+
+  /* Nav: horizontally scrollable single row, no wrapping */
+  .nav-masthead {
+    width: 100%;
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* bleed to container edge so first item aligns with logo */
+    margin-left: -.75rem;
+    padding-left: .75rem;
+    padding-bottom: .15rem;
+  }
+
+  .nav-masthead::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-masthead .nav-link {
+    font-size: .72rem;
+    white-space: nowrap;
+    min-height: 2.75rem; /* 44px touch target */
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-masthead .nav-link + .nav-link {
+    margin-left: .85rem;
+  }
+
+  /* Reduce intro breathing room below sticky header */
+  #intro {
+    padding-top: 1.5rem !important;
+    margin-top: .5rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Scale down display heading on phone */
+  h1.display-4 {
+    font-size: 2.1rem;
+    letter-spacing: -.02em;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  /* Tighten experience left border indentation */
+  #exp .pb-4 {
+    padding-left: .85rem;
+  }
+
+  /* Slightly smaller pills on narrow screens */
+  .skill-tag {
+    font-size: .78rem;
+    padding: .2rem .5rem;
+  }
+
+  /* Footer layout on small screens */
+  footer {
+    flex-direction: column !important;
+    gap: .35rem;
+    align-items: flex-start !important;
+  }
+}
+
 
 /*
  * Print
  */
+
 @media print {
   html, body {
     background: #fff !important;
@@ -147,10 +337,20 @@ ul li::before {
   }
 
   hr.red {
-    border-color: #000 !important;
+    border-top-color: #000 !important;
   }
 
   ul li::before {
     color: #000 !important;
+  }
+
+  .skill-tag {
+    border-color: #999 !important;
+    background: transparent !important;
+    color: #000 !important;
+  }
+
+  #exp .pb-4 {
+    border-left-color: #999 !important;
   }
 }
