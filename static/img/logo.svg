@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" width="44" height="44" role="img" aria-label="Yelena Kim">
+  <!-- Outer ring -->
+  <circle cx="28" cy="28" r="26" fill="none" stroke="#EF5D60" stroke-width="2"/>
+  <!-- Inner accent arc (bottom quarter) -->
+  <path d="M 10 38 A 20 20 0 0 0 46 38" fill="none" stroke="#EF5D60" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
+  <!-- Y -->
+  <text x="10" y="37"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="26" font-weight="800"
+        fill="#FBF5F3">Y</text>
+  <!-- K -->
+  <text x="28" y="37"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="26" font-weight="800"
+        fill="#EF5D60">K</text>
+</svg>

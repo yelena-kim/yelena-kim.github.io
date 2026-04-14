@@ -1,4 +1,11 @@
 /*
+ * Smooth scroll
+ */
+html {
+  scroll-behavior: smooth;
+}
+
+/*
  * Globals
  */
  .bd-placeholder-img {
@@ -90,7 +97,60 @@ ul li::before {
   content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
   color: #EF5D60; /* Change the color */
   font-weight: bold; /* If you want it to be bold */
-  display: inline-block; /* Needed to add space between the bullet and the text */ 
+  display: inline-block; /* Needed to add space between the bullet and the text */
   width: 1em; /* Also needed for space (tweak if needed) */
   margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+/*
+ * Skills table
+ */
+.skills-grid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: .35rem 1rem;
+}
+
+.skills-label {
+  color: #EF5D60;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/*
+ * Print
+ */
+@media print {
+  html, body {
+    background: #fff !important;
+    color: #000 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  .cover-container {
+    max-width: 100%;
+  }
+
+  header nav,
+  footer {
+    display: none;
+  }
+
+  h1, h2, h3, p, li {
+    color: #000 !important;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+
+  hr.red {
+    border-color: #000 !important;
+  }
+
+  ul li::before {
+    color: #000 !important;
+  }
 }
