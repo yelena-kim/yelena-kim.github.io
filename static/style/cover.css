@@ -70,6 +70,8 @@ body {
 
 .red {
   color: #EF5D60;
+  border-color: #EF5D60;
+  opacity: 1;
 }
 
 a {
